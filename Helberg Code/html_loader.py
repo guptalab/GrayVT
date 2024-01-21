@@ -16,8 +16,8 @@ for line in data:
 html_output += '</table>\n'
 
 # Write the HTML output to a file
-with open('output.html', 'w') as f:
+with open('index.html', 'w') as f:
     f.write(html_output)
 
 # Open the HTML file in the default web browser
-webbrowser.open('file://' + os.path.realpath('output.html'))
+webbrowser.open('file://' + os.path.realpath('index.html'))
