@@ -99,7 +99,7 @@ if __name__ == "__main__":
         ans[0] = []
         exit("s should be less than n")
 
-    with open('output.txt', 'a') as f:
+    with open('output.csv', 'a') as f:
         codewords = pp.PrettyPrinter(indent=4, stream=f)
         print("============================================================================", file=f)
         print("N = {}, q = {}, s = {}, Codeword total = {}, Max number of codewords = {}".format(
