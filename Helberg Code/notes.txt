@@ -1,0 +1,62 @@
+code is t delettiion coorecting 1 error 2 function 1. map 2. deletion make html
+page for this helberg sequence q = 2^r --> 1. map 2. vt even binary --> q = 4 //
+map permutaiton
+
+
+we intent to mkae indel code using gray map 
+many non linear binary optimal codes using gray map isometry from 
+
+organization section 
+
+define zz z 
+
+\defintion 
+\Throerm
+\Lemma 
+
+latex wiki 
+
+
+
+introduction 
+
+simple para 
+DNA why ?? 
+vt code 
+Helberg code
+1994 z4 code gray map why ? 
+what has been done 
+
+runnning text 
+k dimension vt code 
+
+now simple gray map 
+
+Organization section 
+
+Prelimaries and Background
+
+sirf inerstion del code 
+sphere decoding 2 resut with ref 
+
+VT code
+Propositions 
+
+lee weight
+
+gray map and 
+codes over Z4 
+k0 , k1 and preilimaries 
+proeprty of gray map
+iso metry  include this done sir 
+
+
+for this a non error proof example  this proof karo 
+
+
+
+
+Pacjet deketion code define now  we consdier secneario where packet is deleted 
+DNA motivate 
+remark and things 
+
