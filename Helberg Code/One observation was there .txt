@@ -1,0 +1,27 @@
+One observation was there :
+
+in mapping from q-ary to binary  ( q = 4) 
+for residue value a = 40 
+original= [0 0 0 1] gray mapped= [0, 0, 0, 0, 0, 0, 0, 1]
+original= [1 0 3 0] gray mapped= [0, 1, 0, 0, 1, 0, 0, 0]
+original= [2 0 3 3] gray mapped= [1, 1, 0, 0, 1, 0, 1, 0]
+original= [2 3 2 0] gray mapped= [1, 1, 1, 0, 1, 1, 0, 0]
+original= [3 3 2 3] gray mapped= [1, 0, 1, 0, 1, 1, 1, 0]
+
+this are the codewords with binary strings and in reverse mapping we can get these q-ary code with binary Helberg definition with slight change in our gray map 
+a = 33 
+original= [0 0 0 0 0 0 1 0] reverse gray mapped= [0, 0, 0, 3]
+original= [0 1 0 0 1 1 1 1] reverse gray mapped= [1, 0, 2, 2]
+original= [0 1 1 1 0 1 0 0] reverse gray mapped= [1, 2, 1, 0]
+original= [1 0 0 0 1 1 0 0] reverse gray mapped= [3, 0, 2, 0]
+original= [1 1 1 1 0 1 1 1] reverse gray mapped= [2, 2, 1, 2]
+
+here is you see our gray map can be rotated to map and get exact q-ary codewords before 
+if 
+00 ->0
+01 -> 2
+11 -> 3
+10 -> 1
+
+for example 
+[0,0,0,3] -> [0,0,0,1]
