@@ -120,13 +120,13 @@ if __name__ == "__main__":
                 for k in ans[i]:
                     code = []
                     for j in range(0, len(k), 2):
+                        if (k[j] == 1 and k[j+1] == 1):
+                            code.append(0)
                         if (k[j] == 0 and k[j+1] == 1):
                             code.append(1)
-                        if (k[j] == 1 and k[j+1] == 0):
-                            code.append(3)
                         if (k[j] == 0 and k[j+1] == 0):
-                            code.append(0)
-                        if (k[j] == 1 and k[j+1] == 1):
+                            code.append(3)
+                        if (k[j] == 1 and k[j+1] == 0):
                             code.append(2)
                     if i not in sphered:
                         sphered[i] = []
@@ -154,7 +154,7 @@ if __name__ == "__main__":
             if (len(sphered[i]) > 1):
                 print("a = ", i, file=f)
                 print(sphered[i], file=f)
-                delList = calculateDeletionSphere(sphered[i], s-2)
+                delList = calculateDeletionSphere(sphered[i], (s-1)/2)
                 print(delList, file=f)
 
                 reverseDelList = {}
