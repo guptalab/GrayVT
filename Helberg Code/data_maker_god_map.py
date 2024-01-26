@@ -100,7 +100,7 @@ if __name__ == "__main__":
         exit("s should be less than n")
 
     qry = {}
-    with open('output.csv', 'a') as f:
+    with open('temp.csv', 'a') as f:
         print("For q = ", numAlphabets, "n = ", length,
               "Weights and m :", vArray, m, file=f)
         codewords = pp.PrettyPrinter(indent=4, stream=f)
