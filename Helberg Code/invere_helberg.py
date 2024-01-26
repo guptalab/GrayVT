@@ -107,7 +107,8 @@ if __name__ == "__main__":
         print("============================================================================", file=f)
 
         print(ans, file=f)
-        delList = calculateDeletionSphere(finalList, s-1)
+        print("S" , s/2)
+        delList = calculateDeletionSphere(finalList, s/2)
         reverseDelList = {}
         for i in delList:
             for j in delList[i]:
@@ -117,88 +118,88 @@ if __name__ == "__main__":
         delList = reverseDelList
         print("deletion sphere", file=f)
         codewords.pprint(delList)
-    #     sphered = {}
-    #     for i in ans:
-    #         flag = True
-    #         listTuple = [tuple(lst) for lst in ans[i]]
-    #         x = set(listTuple)
-    #         for j in delList:
-    #             listTuple = [tuple(lst) for lst in delList[j]]
-    #             y = set(listTuple)
-    #             if len(x.intersection(y)) > 1:
-    #                 flag = False
-    #                 break
-    #         if (flag and len(ans[i]) > 1):
-    #             print("a = ", i, file=f)
-    #             for k in ans[i]:
-    #                 code = []
-    #                 for j in range(0, len(k), 2):
-    #                     if (k[j] == 0 and k[j+1] == 1):
-    #                         code.append(1)
-    #                     if (k[j] == 1 and k[j+1] == 1):
-    #                         code.append(3)
-    #                     if (k[j] == 0 and k[j+1] == 0):
-    #                         code.append(0)
-    #                     if (k[j] == 1 and k[j+1] == 0):
-    #                         code.append(2)
-    #                 if i not in sphered:
-    #                     sphered[i] = []
-    #                 sphered[i].append(code)
-    #                 print("original= {} <br> reverse gray mapped= {}".format(
-    #                     k, code), file=f)
+        sphered = {}
+        for i in ans:
+            flag = True
+            listTuple = [tuple(lst) for lst in ans[i]]
+            x = set(listTuple)
+            for j in delList:
+                listTuple = [tuple(lst) for lst in delList[j]]
+                y = set(listTuple)
+                if len(x.intersection(y)) > 1:
+                    flag = False
+                    break
+            if (flag and len(ans[i]) > 1):
+                print("a = ", i, file=f)
+                for k in ans[i]:
+                    code = []
+                    for j in range(0, len(k), 2):
+                        if (k[j] == 0 and k[j+1] == 1):
+                            code.append(1)
+                        if (k[j] == 0 and k[j+1] == 0):
+                            code.append(3)
+                        if (k[j] == 1 and k[j+1] == 1):
+                            code.append(0)
+                        if (k[j] == 1 and k[j+1] == 0):
+                            code.append(2)
+                    if i not in sphered:
+                        sphered[i] = []
+                    sphered[i].append(code)
+                    print("original= {} <br> reverse gray mapped= {}".format(
+                        k, code), file=f)
 
-    #     print("N = {}, q = {}, s = {}, Codeword total = {}, Max number of codewords = {}".format(
-    #         length, numAlphabets, s, len(finalList), max(len(v) for v in ans.values())), file=f)
-    #     print("============================================================================", file=f)
+        print("N = {}, q = {}, s = {}, Codeword total = {}, Max number of codewords = {}".format(
+            length, numAlphabets, s, len(finalList), max(len(v) for v in ans.values())), file=f)
+        print("============================================================================", file=f)
 
-    #     print("{} {}".format(m, vArray), file=f)
-    #     list = []
-    #     maxi = 0
-    #     for i in sphered:
-    #         maxi = max(maxi, len(sphered[i]))
+        print("{} {}".format(m, vArray), file=f)
+        list = []
+        maxi = 0
+        for i in sphered:
+            maxi = max(maxi, len(sphered[i]))
 
-    #     for i in sphered:
-    #         if (len(sphered[i]) >= maxi):
-    #             list.append((i, len(sphered[i])))
-    #     list.sort(key=lambda x: x[1], reverse=True)
-    #     print(list)
-    #     print(list, file=f)
-    #     for i in sphered:
-    #         if (len(sphered[i]) > 1):
-    #             print("a = ", i, file=f)
-    #             print(sphered[i], file=f)
-    #             delList = calculateDeletionSphere(sphered[i], s-2)
-    #             print(delList, file=f)
+        for i in sphered:
+            if (len(sphered[i]) >= maxi):
+                list.append((i, len(sphered[i])))
+        list.sort(key=lambda x: x[1], reverse=True)
+        print(list,"\n............",s/2)
+        print(list, file=f)
+        for i in sphered:
+            if (len(sphered[i]) > 1):
+                print("a = ", i, file=f)
+                print(sphered[i], file=f)
+                delList = calculateDeletionSphere(sphered[i], (s-1)/2)
+                print(delList, file=f)
 
-    #             reverseDelList = {}
-    #             for i in delList:
-    #                 for j in delList[i]:
-    #                     if tuple(j) not in reverseDelList:
-    #                         reverseDelList[tuple(j)] = []
-    #                     reverseDelList[tuple(j)].append(i)
-    #             delList = reverseDelList
-    #             print("deletion sphere", file=f)
-    #             codewords.pprint(delList)
+                reverseDelList = {}
+                for i in delList:
+                    for j in delList[i]:
+                        if tuple(j) not in reverseDelList:
+                            reverseDelList[tuple(j)] = []
+                        reverseDelList[tuple(j)].append(i)
+                delList = reverseDelList
+                print("deletion sphere", file=f)
+                codewords.pprint(delList)
 
-    #             flag = True
-    #             for i in delList:
-    #                 listTuple = [tuple(lst) for lst in delList[i]]
-    #                 x = set(listTuple)
-    #                 for j in delList:
-    #                     listTuple = [tuple(lst) for lst in delList[j]]
-    #                     y = set(listTuple)
-    #                     if len(x.intersection(y)) == 0 or x == y:
-    #                         flag = True
-    #                     else:
-    #                         flag = False
-    #                         break
-    #                 if not flag:
-    #                     break
-    #             if flag:
-    #                 code = []
-    #                 for i in delList:
-    #                     code.append(i)
-    #                 print(
-    #                     "-------------------No intersection----------------- {}".format(code), file=f)
-    #             else:
-    #                 print("intersecting codewords " + str(i))
+                flag = True
+                for i in delList:
+                    listTuple = [tuple(lst) for lst in delList[i]]
+                    x = set(listTuple)
+                    for j in delList:
+                        listTuple = [tuple(lst) for lst in delList[j]]
+                        y = set(listTuple)
+                        if len(x.intersection(y)) == 0 or x == y:
+                            flag = True
+                        else:
+                            flag = False
+                            break
+                    if not flag:
+                        break
+                if flag:
+                    code = []
+                    for i in delList:
+                        code.append(i)
+                    print(
+                        "-------------------No intersection----------------- {}".format(code), file=f)
+                else:
+                    print("intersecting codewords " + str(i))

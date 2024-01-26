@@ -1,4 +1,4 @@
-For q =  4 n =  4 Weights and m : [ 1.  4. 13. 40.] 121.0
+    For q =  4 n =  4 Weights and m : [ 1.  4. 13. 40.] 121.0
 For Queterenary: 
 N = 4, q = 4, s = 1, Codeword total = 256, Max number of codewords = 5
 ============================================================================
