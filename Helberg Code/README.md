@@ -22,7 +22,8 @@ The Helberg Theorem Analyzer is a collection of Python scripts for analyzing Hel
 
 2. Navigate to the project directory:
    ```bash
-   cd helberg-theorem-analyzer
+   cd Theorem
+   py main.py
    ```
 
 3. Install dependencies:
