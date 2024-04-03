@@ -34,7 +34,7 @@ def find_a_b(x):
 
 with open("Results.txt", "w") as file:
     pass
-for n in range(1, 11):
+for n in range(1, 12):
     print(f"For n = {n}:\n")
     
     # Open or create a file for appending
