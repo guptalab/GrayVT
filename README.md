@@ -13,15 +13,15 @@ This document outlines the mathematical properties and applications of Naisargik
    ```bash
    git clone https://github.com/guptalab/GrayVT.git
    ```
-
-2. Navigate to the project directory:
+2. Enter into project repository:
    ```bash
-   python Helberg Code/Theoremmain.py
+   cd GrayVT
    ```
 
-3. Install dependencies:
+3. Navigate to the project directory:
    ```bash
-   pip install -r requirements.txt
+   cd Helberg Code/Theorem
+   python main.py
    ```
 
 ## Usage
